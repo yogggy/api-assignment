@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+</head>
+<body>
+    <div>
+        <table border="1">
+            <thead>
+                <th>
+                    Inventory Table
+                </th>
+            </thead>
+            <thead>
+                <th>
+                    inventory_id
+                </th>
+                <th>
+                    inventory_type
+                </th>
+                <th>
+                    item_name
+                </th>
+                <th>
+                    available_quantity
+                </th>
+            </thead>
+            <tbody>
+               <% for(let inv of inventory) {%>
+                <tr>
+                <td><%= inv._id %></td>
+                <td><%= inv.inventoryType %></td>
+                <td><%= inv.itemName %></td>
+                <td><%= inv.quantity %></td>
+                </tr>
+                <%}%>
+            </tbody>
+        </table>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <table border="1">
+            <thead>
+                <th>
+                    Order Table
+                </th>
+            </thead>
+            <thead>
+                <th>
+                    customer_id
+                </th>
+                <th>
+                    inventory_id
+                </th>
+                <th>
+                    item_name
+                </th>
+                <th>
+                    quantity
+                </th>
+            </thead>
+            <tbody>
+               <% for(let ord of orders) {%>
+                <tr>
+                <td><%= ord.custId%></td>
+                <td><%= ord.invtId %></td>
+                <td><%= ord.itemName %></td>
+                <td><%= ord.orderquantity %></td>
+                </tr>
+                <%}%>
+            </tbody>
+        </table>
+
+    </div>
+    
+</body>
+</html>
